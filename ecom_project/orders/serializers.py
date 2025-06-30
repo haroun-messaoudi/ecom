@@ -55,13 +55,13 @@ class OrderSerializer(serializers.ModelSerializer):
                 'wilaya': "This field is required"
             })
 
-        if delivery_type == "A Domicile":
-            if commune is None:
+        # if delivery_type == "A Domicile":
+        #     if commune is None:
 
-                raise serializers.ValidationError({
-                   "commune":"This field is required when delivery_type is 'A Domicile'."
+        #         raise serializers.ValidationError({
+        #            "commune":"This field is required when delivery_type is 'A Domicile'."
 
-                })
+        #         })
 
         return data
 
